@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8085:8085
+    depends_on:
+      - db
+  db:
+    container_name: tenpo-database
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=tenpo
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=secretclave

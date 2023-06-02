@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "f0a28742-bf75-4469-bf7a-b03a31f06668",
+		"name": "tenpo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2557804"
+	},
+	"item": [
+		{
+			"name": "random.org",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.random.org/integers/?num=1&min=1&max=100&col=1&base=10&format=plain",
+					"protocol": "https",
+					"host": [
+						"www",
+						"random",
+						"org"
+					],
+					"path": [
+						"integers",
+						""
+					],
+					"query": [
+						{
+							"key": "num",
+							"value": "1"
+						},
+						{
+							"key": "min",
+							"value": "1"
+						},
+						{
+							"key": "max",
+							"value": "100"
+						},
+						{
+							"key": "col",
+							"value": "1"
+						},
+						{
+							"key": "base",
+							"value": "10"
+						},
+						{
+							"key": "format",
+							"value": "plain"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calculate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"x\": 75,\n    \"y\": 16\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/tenpo/numbers/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"tenpo",
+						"numbers",
+						"calculate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"x\": 3,\n    \"y\": 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/tenpo/numbers/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"tenpo",
+								"numbers",
+								"calculate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 02:19:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": 12.4\n}"
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"x\": 3,\n    \"y\": 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/tenpo/numbers/calculate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"tenpo",
+								"numbers",
+								"calculate"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 02:20:20 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2023-05-31T02:20:20.717+00:00\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"message\": \"404 Not Found from GET https://www.random.org/integer?num=1&min=1&max=100&col=1&base=10&format=plain\",\n    \"path\": \"/tenpo/numbers/result\"\n}"
+				}
+			]
+		},
+		{
+			"name": "history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/tenpo/history?page=0&size=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"tenpo",
+						"history"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/tenpo/history?page=0&size=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"tenpo",
+								"history"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 May 2023 03:26:25 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        {\n            \"createdAt\": \"2023-05-31T00:02:46.079928\",\n            \"type\": \"CALCULATE\",\n            \"request\": \"{x: 3.0, y: 7.0}\",\n            \"response\": \"{result: 18.5}\"\n        },\n        {\n            \"createdAt\": \"2023-05-31T00:04:06.974042\",\n            \"type\": \"CALCULATE\",\n            \"request\": \"{x: 15.0, y: 1.0}\",\n            \"response\": \"{result: 17.12}\"\n        },\n        {\n            \"createdAt\": \"2023-05-31T00:05:08.732468\",\n            \"type\": \"CALCULATE\",\n            \"request\": \"{x: 15.0, y: 33.0}\",\n            \"response\": \"{result: 79.2}\"\n        },\n        {\n            \"createdAt\": \"2023-05-31T00:26:01.037412\",\n            \"type\": \"HISTORY\",\n            \"request\": \"Page request [number: 0, size 2, sort: UNSORTED]\",\n            \"response\": \"Number of elements: 2\"\n        }\n    ],\n    \"pageable\": {\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"pageNumber\": 0,\n        \"pageSize\": 4,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"totalPages\": 2,\n    \"totalElements\": 5,\n    \"last\": false,\n    \"size\": 4,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 4,\n    \"first\": true,\n    \"empty\": false\n}"
+				},
+				{
+					"name": "many requests",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/tenpo/history?page=0&size=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"tenpo",
+								"history"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "Too Many Requests",
+					"code": 429,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Jun 2023 19:46:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2023-06-01T19:46:56.079+00:00\",\n    \"status\": 429,\n    \"error\": \"Too Many Requests\",\n    \"message\": \"Exceded request limit per minute\",\n    \"path\": \"/tenpo/history\"\n}"
+				}
+			]
+		}
+	]
+}
