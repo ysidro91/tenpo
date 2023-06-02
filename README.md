@@ -5,7 +5,7 @@
 `POST /calculate` Recibe 2 números, los suma y a ese resultado le suma un porcentaje retornado desde otro servicio.
 
 ```
-curl --location 'http://localhost:8084/tenpo/numbers/calculate' \
+curl --location 'http://localhost:8085/tenpo/numbers/calculate' \
 --header 'Content-Type: application/json' \
 --data '{
     "x": 45,
@@ -16,7 +16,7 @@ curl --location 'http://localhost:8084/tenpo/numbers/calculate' \
 `GET /history` Retorna los registros de cada request y respuesta que recibió el servicio.
 
 ```
-curl --location 'http://localhost:8084/tenpo/history?page=0&size=2'
+curl --location 'http://localhost:8085/tenpo/history?page=0&size=2'
 ```
 
 Dentro del proyecto hay un archivo llamado `tenpo.postman_collection.json` tiene ambos llamados y ejemplos de casos exitosos y error.
