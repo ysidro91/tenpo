@@ -41,7 +41,7 @@ Ejecutar el siguiente comando:
 docker-compose up
 ```
 
-Los puertos expuestos en el docker-compose.yml` deben coincidir con los puertos definidos en el `application.properties`
+Los puertos expuestos en el `docker-compose.yml` deben coincidir con los puertos definidos en el `application.properties`
 
 ### Pruebas unitarias
 
